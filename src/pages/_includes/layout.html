@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>{{ title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#0b0c0c">
+    <link href="/styles/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <a href="#main-content">Skip to main content</a>
+
+    <header role="banner">
+    </header>
+
+    <main role="main">
+        {{ content | safe }}
+    </main>
+
+    <footer role="contentinfo">
+    </footer>
+
+    <script src="/js/index.js"></script>
+</body>
+
+</html>
