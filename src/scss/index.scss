@@ -1,3 +1,23 @@
+$dark: #0f1713;
+$mid: #5a6861;
+$light: #f9fbfa;
+
 * {
-  color: red;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}
+
+body {
+  background-color: $light;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+li,
+p,
+span {
+  color: $dark;
 }
