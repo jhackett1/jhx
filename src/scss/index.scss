@@ -4,6 +4,12 @@
 @import "globals";
 @import "utils";
 
+// vendor
+@import "vendor/dialog";
+
 // pages
 @import "front";
 @import "project";
+
+// components
+@import "dialog";

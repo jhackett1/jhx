@@ -1,0 +1,39 @@
+.dialog {
+  position: relative;
+  width: 90%;
+  max-width: 800px;
+  margin: 7vh auto;
+  box-shadow: 0px 5px 25px transparentize($dark, 0.75);
+
+  &__header {
+    padding: 35px;
+  }
+
+  &__title {
+    margin-top: 0;
+  }
+
+  &__close {
+    position: absolute;
+    right: 7px;
+    top: 7px;
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+    display: inline-flex;
+
+    svg rect {
+      fill: $dark;
+    }
+
+    &:focus,
+    &:active {
+      outline: 3px solid $mid;
+      background: $mid;
+      svg rect {
+        fill: $light;
+      }
+    }
+  }
+}
