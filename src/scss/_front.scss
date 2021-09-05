@@ -187,6 +187,10 @@
 
   &__content {
     font-size: 1.3rem;
+
+    * + * {
+      margin-top: 1rem;
+    }
   }
 
   &__sidebar {
@@ -209,10 +213,6 @@
     &__content {
       grid-column: 1 / 3;
       font-size: 2rem;
-
-      * + * {
-        margin-top: 1rem;
-      }
     }
 
     &__sidebar {

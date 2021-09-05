@@ -3,15 +3,17 @@ import { Dialog as ReachDialog } from "@reach/dialog"
 
 interface Props {
   title: string
+  caption: string
   children: React.ReactChildren
 }
 
-const Dialog = ({ title, children }: Props) => {
-  const handleClose = () => (window.location.pathname = "/")
+const Dialog = ({ title, children, caption }: Props) => {
+  const handleClose = () => (window.location.hash = "/")
 
   return (
     <ReachDialog
       aria-label={title}
+      as="article"
       className="dialog"
       isOpen={true}
       onDismiss={handleClose}
@@ -20,8 +22,8 @@ const Dialog = ({ title, children }: Props) => {
         <button className="dialog__close" onClick={handleClose}>
           <span className="visually-hidden">Close</span>
           <svg
-            width="30"
-            height="29"
+            width="25"
+            height="25"
             viewBox="0 0 30 29"
             xmlns="http://www.w3.org/2000/svg"
           >
@@ -42,7 +44,8 @@ const Dialog = ({ title, children }: Props) => {
           </svg>
         </button>
 
-        <h1>{title}</h1>
+        <p className="dialog__caption">{caption}</p>
+        <h1 className="dialog__title">{title}</h1>
       </header>
 
       {children}

@@ -16,8 +16,9 @@
 }
 
 .button {
-  display: inline-block;
-  text-align: left;
+  margin-top: 0.5rem;
+  display: block;
+  text-align: center;
   padding: 15px 35px;
   border: 2px solid $mid;
   text-decoration: none;
@@ -29,6 +30,11 @@
     background: $mid;
     outline: none;
     color: $light;
+  }
+
+  @media screen and (min-width: 700px) {
+    display: inline-block;
+    text-align: left;
   }
 }
 
