@@ -1,23 +1,186 @@
-$dark: #0f1713;
-$mid: #5a6861;
-$light: #f9fbfa;
+@import "vars";
+@import "mixins";
+@import "globals";
+@import "utils";
 
-* {
-  box-sizing: border-box;
-  font-family: "Rubik", sans-serif;
+.skip-link {
+  display: block;
+  padding: 15px;
+  text-align: center;
+  left: 50%;
+  position: absolute;
+  transform: translateY(-100%);
+
+  &:focus {
+    position: relative;
+    transform: none;
+    left: inherit;
+  }
 }
 
-body {
-  background-color: $light;
+.masthead {
+  &__portrait {
+    border-radius: 100%;
+    max-height: 300px;
+    margin-bottom: 1rem;
+  }
+
+  &__headline {
+    font-weight: 400;
+    font-size: 2.75rem;
+  }
+
+  @media screen and (min-width: 700px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    padding: 70px 0px;
+
+    &__portrait {
+      margin-bottom: 0;
+    }
+
+    &__headline {
+      font-size: 4rem;
+    }
+  }
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-li,
-p,
-span {
-  color: $dark;
+.projects {
+  padding: 25px 0px;
+
+  @media screen and (min-width: 700px) {
+    padding: 45px 0px;
+  }
+}
+
+.project {
+  border-top: 3px solid $dark;
+  padding-top: 25px;
+
+  dl {
+    @include metaList;
+  }
+}
+
+.other-work {
+  padding: 25px 0px;
+
+  @media screen and (min-width: 700px) {
+    padding: 45px 0px;
+
+    &__inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 35px;
+    }
+  }
+}
+
+.small-project {
+  border-top: 3px solid $dark;
+  padding-top: 25px;
+
+  dl {
+    @include metaList;
+  }
+}
+
+.tools {
+  border-top: 3px solid $dark;
+  padding: 25px 0px;
+
+  dl {
+    dt {
+      margin-bottom: 0.25rem;
+    }
+    dd {
+      margin-bottom: 1rem;
+    }
+  }
+
+  @media screen and (min-width: 700px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 35px;
+    padding: 45px 0px;
+
+    dl {
+      grid-column: 2 / 4;
+      column-count: 2;
+      column-gap: 35px;
+    }
+  }
+}
+
+.narrative {
+  border-top: 3px solid $dark;
+  padding: 25px 0px;
+
+  &__content {
+    font-size: 1.3rem;
+  }
+
+  &__sidebar {
+    h2 {
+      margin-top: 2rem;
+      font-size: 1rem;
+    }
+
+    li {
+      margin-top: 0.5rem;
+    }
+  }
+
+  @media screen and (min-width: 700px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 35px;
+    padding: 45px 0px;
+
+    &__content {
+      grid-column: 1 / 3;
+      font-size: 2rem;
+
+      * + * {
+        margin-top: 1rem;
+      }
+    }
+
+    &__sidebar {
+      h2:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+.colophon {
+  padding: 30px 0px;
+  background: $dark;
+
+  .container {
+    padding-right: 33%;
+  }
+
+  a {
+    color: $light;
+    &:hover {
+      color: darken($light, 10);
+    }
+    &:focus {
+      color: $light;
+    }
+  }
+
+  * {
+    color: $mid;
+    font-size: 0.9rem;
+  }
+
+  * + * {
+    margin-top: 0.5rem;
+  }
 }

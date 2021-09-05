@@ -1,0 +1,33 @@
+.container {
+  max-width: $max-width;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 25px;
+}
+
+.section-heading {
+  font-weight: 300;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+
+  @media screen and (min-width: 700px) {
+    font-size: 3rem;
+  }
+}
+
+.button {
+  display: inline-block;
+  text-align: left;
+  padding: 15px 35px;
+  border: 2px solid $mid;
+  text-decoration: none;
+
+  &:hover {
+    border-color: darken($mid, 10);
+  }
+  &:focus {
+    background: $mid;
+    outline: none;
+    color: $light;
+  }
+}

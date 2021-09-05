@@ -1,0 +1,12 @@
+@mixin metaList {
+  margin-bottom: 1rem;
+
+  dt {
+    width: 55px;
+    display: inline-block;
+  }
+
+  dd {
+    display: inline;
+  }
+}

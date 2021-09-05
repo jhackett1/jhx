@@ -1,0 +1,53 @@
+* {
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $light;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 600;
+  color: $dark;
+}
+
+li,
+p,
+span {
+  color: $dark;
+  line-height: 1.5;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  color: $mid;
+  &:hover {
+    // text-decoration: none;
+    color: darken($mid, 10);
+  }
+  &:focus {
+    background: $mid;
+    outline: 3px solid $mid;
+    color: $light;
+    text-decoration: none;
+  }
+}
+
+dt {
+  font-weight: 600;
+}
+
+blockquote {
+  border-top: 1px dashed $dark;
+}
