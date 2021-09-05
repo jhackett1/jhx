@@ -1,0 +1,254 @@
+.skip-link {
+  display: block;
+  padding: 15px;
+  text-align: center;
+  left: 50%;
+  position: absolute;
+  transform: translateY(-100%);
+
+  &:focus {
+    position: relative;
+    transform: none;
+    left: inherit;
+  }
+}
+
+.quote {
+  overflow: auto;
+  position: relative;
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px dashed $dark;
+
+  q {
+    font-size: 1.1rem;
+  }
+
+  cite {
+    display: block;
+    padding-top: 10px;
+    font-weight: 600;
+
+    &:before {
+      content: "— ";
+    }
+  }
+}
+
+.masthead {
+  padding-bottom: 50px;
+
+  &__portrait {
+    border-radius: 100%;
+    max-height: 200px;
+    margin-bottom: 1rem;
+  }
+
+  &__headline {
+    font-weight: 400;
+    font-size: 2.75rem;
+  }
+
+  @media screen and (min-width: 700px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    padding: 70px 0px;
+
+    &__portrait {
+      max-height: 300px;
+      margin-bottom: 0;
+    }
+
+    &__headline {
+      font-size: 4rem;
+    }
+  }
+}
+
+.projects {
+  padding: 25px 0px;
+
+  @media screen and (min-width: 700px) {
+    padding: 55px 0px;
+  }
+}
+
+.project {
+  border-top: 3px solid $dark;
+  padding-top: 25px;
+
+  h3 {
+    font-size: 1.6rem;
+  }
+
+  &__header {
+    dl {
+      margin-top: 0.75rem;
+    }
+  }
+
+  & + .project {
+    margin-top: 25px;
+  }
+
+  @media screen and (min-width: 700px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 35px;
+
+    &__content {
+      grid-column: 2 / 4;
+      column-count: 2;
+      column-gap: 35px;
+    }
+
+    & + .project {
+      margin-top: 55px;
+    }
+  }
+
+  dl {
+    margin-top: 1rem;
+    @include metaList;
+  }
+}
+
+.other-work {
+  padding-bottom: 25px;
+
+  @media screen and (min-width: 700px) {
+    padding-bottom: 55px;
+
+    &__inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 35px;
+    }
+  }
+}
+
+.small-project {
+  border-top: 3px solid $dark;
+  padding-top: 25px;
+
+  h3 {
+    font-size: 1.6rem;
+  }
+
+  dl {
+    @include metaList;
+    margin-top: 1rem;
+  }
+
+  & + .small-project {
+    margin-top: 25px;
+  }
+
+  @media screen and (min-width: 700px) {
+    & + .small-project {
+      margin-top: 0px;
+    }
+  }
+}
+
+.tools {
+  border-top: 3px solid $dark;
+  padding: 25px 0px;
+
+  dl {
+    dt {
+      margin-bottom: 0.25rem;
+    }
+    dd {
+      margin-bottom: 1rem;
+    }
+  }
+
+  @media screen and (min-width: 700px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 35px;
+    padding: 55px 0px;
+
+    dl {
+      grid-column: 2 / 4;
+      column-count: 2;
+      column-gap: 35px;
+    }
+  }
+}
+
+.narrative {
+  border-top: 3px solid $dark;
+  padding: 25px 0px;
+
+  &__content {
+    font-size: 1.3rem;
+  }
+
+  &__sidebar {
+    h2 {
+      margin-top: 2rem;
+      font-size: 1rem;
+    }
+
+    li {
+      margin-top: 0.5rem;
+    }
+  }
+
+  @media screen and (min-width: 700px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 35px;
+    padding: 55px 0px;
+
+    &__content {
+      grid-column: 1 / 3;
+      font-size: 2rem;
+
+      * + * {
+        margin-top: 1rem;
+      }
+    }
+
+    &__sidebar {
+      h2:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+.colophon {
+  padding: 30px 0px;
+  background: $dark;
+
+  a {
+    color: $light;
+    &:hover {
+      color: darken($light, 10);
+    }
+    &:focus {
+      color: $light;
+    }
+  }
+
+  * {
+    color: $mid;
+    font-size: 0.9rem;
+  }
+
+  * + * {
+    margin-top: 0.5rem;
+  }
+
+  @media screen and (min-width: 700px) {
+    .container {
+      padding-right: 33%;
+    }
+  }
+}
