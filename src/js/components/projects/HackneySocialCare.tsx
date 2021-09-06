@@ -6,9 +6,7 @@ const Project = () => (
   <Dialog
     caption="Hackney Council"
     title="Modern social care tools for Hackney"
-  >
-    Testing
-  </Dialog>
+  ></Dialog>
 )
 
 export default Project

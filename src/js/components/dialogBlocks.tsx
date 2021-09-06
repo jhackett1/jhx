@@ -1,7 +1,7 @@
 import * as React from "react"
 
 export const TextBlock = ({ children }: { children: React.ReactChildren }) => (
-  <section className="dialog__text-block">{children}</section>
+  <section className="text-block">{children}</section>
 )
 
 export const GalleryBlock = ({
@@ -11,18 +11,28 @@ export const GalleryBlock = ({
   images: { src: string; alt: string }[]
   caption: string
 }) => (
-  <figure className="dialog__gallery-block">
-    {images.map(image => (
-      <img src={image.src} alt={image.alt} key={image.src} />
-    ))}
-    <caption>{caption}</caption>
-  </figure>
+  <section className="gallery-block">
+    <div className="gallery-block__content">
+      {images.map((image, i) => (
+        <figure key={image.src}>
+          <img src={image.src} alt={image.alt} />
+          <figcaption>Fig. {i + 1}</figcaption>
+        </figure>
+      ))}
+    </div>
+    <p className="gallery-block__caption">{caption}</p>
+  </section>
 )
 
 export const UserStoriesBlock = ({
-  userStories,
+  children,
   caption,
 }: {
-  userStories: React.ReactChildren[]
+  children: React.ReactNode
   caption: string
-}) => <section className="dialog__user-stories-block"></section>
+}) => (
+  <section className="user-stories-block">
+    <ul className="user-stories-block__content">{children}</ul>
+    <p className="user-stories-block__caption">{caption}</p>
+  </section>
+)

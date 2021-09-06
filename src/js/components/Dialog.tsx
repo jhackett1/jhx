@@ -1,5 +1,6 @@
 import * as React from "react"
 import { Dialog as ReachDialog } from "@reach/dialog"
+import Helmet from "react-helmet"
 
 interface Props {
   title: string
@@ -18,6 +19,10 @@ const Dialog = ({ title, children, caption }: Props) => {
       isOpen={true}
       onDismiss={handleClose}
     >
+      <Helmet>
+        <title>{title} | Jaye Hackett</title>
+      </Helmet>
+
       <header className="dialog__header">
         <button className="dialog__close" onClick={handleClose}>
           <span className="visually-hidden">Close</span>

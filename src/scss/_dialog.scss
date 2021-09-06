@@ -1,10 +1,11 @@
 .dialog {
   position: relative;
   width: 90%;
-  max-width: 800px;
+  max-width: 900px;
   margin: 7vh auto;
   padding: 0;
   box-shadow: 0px 5px 25px transparentize($dark, 0.75);
+  background: $light;
 
   &__header {
     padding: 35px;
@@ -42,18 +43,23 @@
     }
   }
 
+  &__header + &__text-block {
+    padding-top: 0;
+  }
+
   @media screen and (min-width: 700px) {
     &__header {
       padding: 45px;
-      max-width: 66.67%;
     }
 
     &__caption {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
+      max-width: 66.67%;
     }
 
     &__title {
       font-size: 2.5rem;
+      max-width: 66.67%;
     }
   }
 }

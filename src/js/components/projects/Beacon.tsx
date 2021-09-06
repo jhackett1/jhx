@@ -3,12 +3,7 @@ import Dialog from "../Dialog"
 import { TextBlock, GalleryBlock, UserStoriesBlock } from "../dialogBlocks"
 
 const Project = () => (
-  <Dialog
-    caption="Hackney Council"
-    title="Modern social care tools for Hackney"
-  >
-    Testing
-  </Dialog>
+  <Dialog caption="Camden Council" title="Coordinating people in need"></Dialog>
 )
 
 export default Project

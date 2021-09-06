@@ -84,6 +84,10 @@
     font-size: 1.6rem;
   }
 
+  p {
+    margin-top: 0.5rem;
+  }
+
   &__header {
     dl {
       margin-top: 0.75rem;
@@ -141,6 +145,10 @@
   dl {
     @include metaList;
     margin-top: 1rem;
+  }
+
+  p {
+    margin-top: 0.5rem;
   }
 
   & + .small-project {
