@@ -9,7 +9,7 @@
     "dev:parcel": "parcel watch src/js/index.tsx -d _site",
     "dev:11ty": "eleventy --serve --input=src/pages",
     "dev:sass": "npm run sass -- --watch",
-    "build": "npm-run-all sass prod:*",
+    "build": "npm-run-all sass build:*",
     "build:parcel": "parcel build src/js/index.tsx -d _site",
     "build:11ty": "ELEVENTY_ENV=production eleventy --input=src/pages"
   },
