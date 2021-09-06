@@ -6,9 +6,9 @@ const Project = () => (
   <Dialog caption="NHSX" title="A digital contact tracing tool for the NHS">
     <TextBlock>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a eros
-        augue. Nullam facilisis et felis vel interdum. Quisque aliquet quam eu
-        dui vulputate, ac laoreet ex egestas.
+        Lorem ipsum <a href="#">dolor sit amet</a>, consectetur adipiscing elit.
+        Nullam a eros augue. Nullam facilisis et felis vel interdum. Quisque
+        aliquet quam eu dui vulputate, ac laoreet ex egestas.
       </p>
       <p>
         Pellentesque lacinia sed magna eu venenatis. In scelerisque, risus a
