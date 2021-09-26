@@ -3,3 +3,14 @@ $mid: #7e8983;
 $light: #f9fbfa;
 
 $max-width: 1100px;
+
+@media (prefers-color-scheme: dark) {
+  $light: #0f1713 !important;
+  // $mid: #7e8983;
+  $dark: #f9fbfa !important;
+  * {
+    $light: #0f1713 !important;
+    // $mid: #7e8983;
+    $dark: #f9fbfa !important;
+  }
+}

@@ -59,9 +59,12 @@
 
   @media screen and (min-width: 700px) {
     &__content {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 35px;
+      // display: grid;
+      // grid-template-columns: 1fr 1fr 1fr;
+      // gap: 35px;
+
+      display: flex;
+      flex-direction: row;
     }
   }
 }

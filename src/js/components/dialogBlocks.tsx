@@ -7,16 +7,20 @@ export const TextBlock = ({ children }: { children: React.ReactChildren }) => (
 export const GalleryBlock = ({
   images,
   caption,
+  startFrom,
 }: {
   images: { src: string; alt: string }[]
   caption: string
+  startFrom?: number
 }) => (
   <section className="gallery-block">
     <div className="gallery-block__content">
       {images.map((image, i) => (
         <figure key={image.src}>
           <img src={image.src} alt={image.alt} />
-          <figcaption>Fig. {i + 1}</figcaption>
+          <figcaption>
+            Fig. {isNaN(startFrom) ? i + 1 : startFrom + i}
+          </figcaption>
         </figure>
       ))}
     </div>

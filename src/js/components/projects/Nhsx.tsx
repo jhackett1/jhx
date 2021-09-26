@@ -5,14 +5,16 @@ import { TextBlock, GalleryBlock, UserStoriesBlock } from "../dialogBlocks"
 const Project = () => (
   <Dialog caption="NHSX" title="A digital contact tracing app for the NHS">
     <TextBlock>
-      <p>I led the early research and design of the NHS COVID-19 app.</p>
+      <p>
+        I led the early research and design of the{" "}
+        <a href="https://covid19.nhs.uk/">NHS COVID-19 app</a>.
+      </p>
 
       <p>
         I spent several weeks at the start of the pandemic on-site at the NHSX
         offices in Elephant and Castle, figuring out how to turn a vague brief
         about "digital contact tracing" into reality.
       </p>
-
 
       <p>
         The now-familiar principles of anonymous Bluetooth contact tracing were
@@ -24,10 +26,9 @@ const Project = () => (
         for this functionality were still six months away. I had to do
         everything for the first time.
       </p>
+    </TextBlock>
 
-      </TextBlock>
-
-          <GalleryBlock
+    <GalleryBlock
       images={[
         {
           src: "/assets/nhsx/4.png",
@@ -45,8 +46,7 @@ const Project = () => (
       caption="Onboarding screens similar to those ultimately used in the app"
     />
 
-          <TextBlock>
-
+    <TextBlock>
       <p>
         We came up with the idea of entering positive test results into the app
         and anonymously transmitting contact data to alert others at this time,
@@ -77,35 +77,35 @@ const Project = () => (
         </a>{" "}
         is best at showing static content rather than fast-changing information,
         so I had to invent totally new design patterns to represent contact
-        tracing operations and statuses.
+        tracing operations and statuses (fig. 4-5).
       </p>
       <p>
         I came up with simple language and visual aids to describe how the app
-        works, along with writing push notifications to encourage people to take
-        action without causing alarm.
+        works (fig. 6), along with writing push notifications to encourage
+        people to take action without causing alarm.
       </p>
     </TextBlock>
 
     <GalleryBlock
+      startFrom={4}
       images={[
         {
           src: "/assets/nhsx/2.png",
-          alt: "Normal screen",
+          alt: "Medium/normal alert screen",
         },
         {
           src: "/assets/nhsx/1.png",
-          alt: "'You need to isolate' screen",
+          alt: "High alert screen",
         },
         {
           src: "/assets/nhsx/3.png",
-          alt: "Onboarding screen with a graphic",
+          alt: "Onboarding screen",
         },
       ]}
       caption="Very early concept screens used in research, which resemble those used in the app today"
     />
 
     <TextBlock>
-      {" "}
       <p>
         Although our team started small, as the pandemic became more serious and
         government restrictions were introduced, more people from more agencies
