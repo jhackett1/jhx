@@ -157,7 +157,7 @@ const Project = () => (
         <a href="https://design-system.hackney.gov.uk/">the design system</a>.
       </p>
       <p>
-        Nationally, the ecosystem of software for social care is stagnant and
+        Nationally, the ecosystem of software for social care is stagnant:
         dominated by one or two massive players who provide monolithic software
         on long, expensive contracts.
       </p>
