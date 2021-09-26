@@ -54,7 +54,7 @@ const Project = () => (
       </p>
 
       <p>
-        We conducted guerilla user research out on the streets of London,
+        We conducted guerrilla user research out on the streets of London,
         focusing on:
       </p>
 
