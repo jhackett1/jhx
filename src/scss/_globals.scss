@@ -32,6 +32,10 @@ ol {
   list-style: none;
 }
 
+dl {
+  color: $dark;
+}
+
 a {
   color: $mid;
   &:hover {
