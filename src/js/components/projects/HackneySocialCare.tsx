@@ -35,14 +35,14 @@ const Project = () => (
       images={[
         {
           src: "/assets/hackney/1.png",
-          alt: "Shared plan",
+          alt: "Planner",
         },
         {
           src: "/assets/hackney/4.png",
           alt: "Task list, allowing out of order completion",
         },
       ]}
-      caption="Recent UI samples of the shared plan and task list"
+      caption="Recent UI samples of the kanban-style planner and task list"
     />
 
     <TextBlock>
