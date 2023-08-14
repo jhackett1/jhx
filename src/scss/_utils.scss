@@ -50,3 +50,24 @@
   white-space: nowrap;
   width: 1px;
 }
+
+
+.alert {
+  border: 3px solid $dark;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+
+  strong {
+    background: $dark;
+    color: $light;
+    padding: .5rem 1.5rem;
+    font-weight: 400;
+  }
+
+  div {
+    padding: 1.5rem;
+    line-height: 1.5;
+  }
+}
